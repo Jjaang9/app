@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Header = () => {
   return (
     <StyledHeader>
-      <Title>내정보</Title>
+      <Title>내 정보</Title>
     </StyledHeader>
   );
 };
