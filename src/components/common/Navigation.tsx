@@ -19,7 +19,7 @@ const Navigation = () => {
         <IconMap />
         <Desc>지도</Desc>
       </LinkItem>
-      <LinkItem href="/sos">
+      <LinkItem href="/">
         <IconSOS />
         <Desc>위급 상황</Desc>
       </LinkItem>
