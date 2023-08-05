@@ -1,17 +1,33 @@
 "use client";
 
+import { ContactListAtomState } from "@/atoms/myInfo.atom";
 import Header from "@/components/common/Header";
 import AlarmIcon from "@/icons/IconAlarm";
 import Police from "@/icons/IconPolice";
+import { useRecoilValue } from "recoil";
 import styled from "styled-components";
 
 const Sos = () => {
+  const contactList = useRecoilValue(ContactListAtomState);
+
+  console.log(contactList);
+
+  const alertToOthers = () => {
+    contactList.forEach(async (contact) => {
+      const isSended = await fetch(`/api/send/${contact.phone}`, {
+        method: "POST",
+      });
+      console.log(`isSended? ${isSended}`);
+      console.log(isSended);
+    });
+  };
+
   return (
     <>
       <Header />
       <FlexBox>
         <AlarmWrapper>
-          <Alarm>
+          <Alarm onClick={alertToOthers}>
             <AroundCall>
               <AlarmIcon />
             </AroundCall>
@@ -43,12 +59,13 @@ const FlexBox = styled.div`
   justify-content: center;
 `;
 
-const Alarm = styled.div`
+const Alarm = styled.button`
   width: 264px;
   height: 75px;
   border: 1px solid #f53636;
   border-radius: 4px;
   color: #f53636;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;

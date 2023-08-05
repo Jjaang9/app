@@ -28,8 +28,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/components/common/Header.tsx",
-    "src/app/community/[id]/page.tsx"
+    "src/components/common/Header.tsx"
   ],
   "exclude": ["node_modules"]
 }
