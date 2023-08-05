@@ -1,14 +1,23 @@
 "use client";
 
 import CommentItem from "@/components/app/community/[id]/CommentItem";
+import useModal from "@/hooks/useModal";
 import IconArrowLeft from "@/icons/IconArrowLeft";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { styled } from "styled-components";
-import Plus from "@/icons/IconPlus";
+import Chatting from "../../createChatting";
 
 const CommunityDetail = () => {
+  const { openModal, closeModal } = useModal();
   const router = useRouter();
+
+  const modalOpen = () => {
+    openModal({
+      component: <Chatting closeModal={closeModal} />,
+    });
+  };
+
   return (
     <div>
       <AppBar
@@ -44,7 +53,7 @@ const CommunityDetail = () => {
         <CommentItem />
         <CommentItem />
       </CommentList>
-      <AddChatting>+ 댓글 쓰기</AddChatting>
+      <AddChatting onClick={modalOpen}>+ 댓글 쓰기</AddChatting>
     </div>
   );
 };
