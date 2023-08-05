@@ -13,19 +13,19 @@ const Navigation = () => {
         <IconSettings />
         <Desc>설정</Desc>
       </LinkItem>
-      <LinkItem href="/setting">
+      <LinkItem href="/map">
         <IconMap />
         <Desc>지도</Desc>
       </LinkItem>
-      <LinkItem href="/settings">
+      <LinkItem href="/sos">
         <IconSOS />
         <Desc>위급 상황</Desc>
       </LinkItem>
-      <LinkItem href="/localAlerts">
+      <LinkItem href="/community">
         <IconCommunity />
         <Desc>지역 알리미</Desc>
       </LinkItem>
-      <LinkItem href="/settings">
+      <LinkItem href="/my-info">
         <IconPerson />
         <Desc>내 정보</Desc>
       </LinkItem>

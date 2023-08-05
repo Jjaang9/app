@@ -5,7 +5,7 @@ import Header from "@/components/common/Header";
 import styled from "styled-components";
 import Image from "next/image";
 
-const LocalAlerts = ({ name }) => {
+const Community = ({ name }) => {
   const truncate = (str) => {
     return str?.length > 20 ? `${str.substring(0, 20)}...` : str;
   };
@@ -189,4 +189,4 @@ export const NewImgWrapper = styled.div`
   background-color: green;
 `;
 
-export default LocalAlerts;
+export default Community;
