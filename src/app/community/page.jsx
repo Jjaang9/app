@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Community = ({ name }) => {
   const truncate = (str) => {
-    return str?.length > 20 ? `${str.substring(0, 20)}...` : str;
+    return str?.length > 15 ? `${str.substring(0, 15)}...` : str;
   };
 
   const dummy = [
@@ -51,28 +51,6 @@ const Community = ({ name }) => {
       contents:
         "비키니시티비키니시티비키니시티비키니시티비키니시티비키니시티비키니시티비키니시티",
     },
-    {
-      id: 7,
-      name: "스폰지밥 5",
-      contents:
-        "집게리아집게리아집게리아집게리아집게리아집게리아집게리아집게리아집게리아집게리아",
-    },
-    {
-      id: 8,
-      name: "스폰지밥 6",
-      contents: "뚱이뚱이뚱이뚱이뚱이뚱이뚱이",
-    },
-    {
-      id: 9,
-      name: "스폰지밥 5",
-      contents:
-        "집게리아집게리아집게리아집게리아집게리아집게리아집게리아집게리아집게리아집게리아",
-    },
-    {
-      id: 10,
-      name: "스폰지밥 6",
-      contents: "뚱이뚱이뚱이뚱이뚱이뚱이뚱이",
-    },
   ];
 
   return (
@@ -84,19 +62,19 @@ const Community = ({ name }) => {
         </NavButtonWrapper>
       </NavBar>
       <StyledLocalAlerts>
-        <BoxStyle>
-          {dummy.map((el, i) => (
-            <NewsWrapper key={i}>
-              <NewsTitleWrapper>
-                <NewsTitle>
-                  <Title>name</Title>
-                  <Subtitle>el.contents</Subtitle>
-                </NewsTitle>
-                <NewImgWrapper>Img</NewImgWrapper>
-              </NewsTitleWrapper>
-            </NewsWrapper>
-          ))}
-        </BoxStyle>
+        {dummy.map((el, i) => (
+          <ItemsWrapper key={i}>
+            <Items>
+              <Item>
+                <Contents>
+                  <Title>{el.name}</Title>
+                  <SubTitle>{truncate(el.contents)}</SubTitle>
+                </Contents>
+                <ImgWrapper></ImgWrapper>
+              </Item>
+            </Items>
+          </ItemsWrapper>
+        ))}
       </StyledLocalAlerts>
     </>
   );
@@ -111,16 +89,16 @@ export const NavBar = styled.div`
 `;
 
 export const NavButtonWrapper = styled.div`
-  width: 25%;
+  width: 100%;
   height: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
 `;
 
 export const NavButton = styled.div`
-  width: 80%;
-  height: 80%;
+  padding: 10px 20px;
+  margin-left: 15px;
   background-color: #ffd600;
   color: white;
   border-radius: 50px;
@@ -132,61 +110,66 @@ export const NavButton = styled.div`
 
 export const BoxStyle = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
 `;
 
 export const StyledLocalAlerts = styled.div`
   width: 100%;
-  height: 83.5%;
+  height: 540px;
   display: flex;
   flex-direction: column;
 `;
 
-export const NewsWrapper = styled.div`
-  width: 94%;
+export const ItemsWrapper = styled.div`
+  width: 100%;
   height: 72px;
-  border-bottom: 1px solid #d0d0d0;
   display: flex;
-  flex-direction: column;
+`;
+
+export const Items = styled.div`
+  width: 100%;
+  height: 72px;
+  margin: 0 10px 0 10px;
+  border-bottom: 1px solid silver;
+  display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-export const NewsTitleWrapper = styled.div`
-  width: 96%;
-  height: 80%;
+export const Item = styled.div`
+  width: 100%;
+  height: 58px;
   display: flex;
+  justify-content: space-between;
 `;
 
-export const NewsTitle = styled.div`
-  width: 70%;
-  height: 100%;
+export const Contents = styled.div`
+  height: 58px;
 `;
 
 export const Title = styled.div`
   width: 100%;
-  height: 30%;
-  margin-top: 5px;
+  height: 28px;
+  display: flex;
+  align-items: center;
 `;
 
-export const Subtitle = styled.div`
+export const SubTitle = styled.div`
   width: 100%;
-  height: 70%;
+  height: 30px;
+  font-size: 13px;
   display: flex;
   align-items: center;
   color: #c2c2c2;
 `;
 
-export const NewImgWrapper = styled.div`
-  width: 40%;
-  height: 80%;
+export const ImgWrapper = styled.div`
+  width: 72px;
+  height: 58px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: gray;
-  margin-top: 5px;
-  background-color: green;
+  align-items: center;
+  background-color: orange;
 `;
 
 export default Community;
