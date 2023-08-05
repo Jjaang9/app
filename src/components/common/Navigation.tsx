@@ -1,3 +1,5 @@
+"use client";
+
 import IconCommunity from "@/icons/IconCommunity";
 import IconMap from "@/icons/IconMap";
 import IconPerson from "@/icons/IconPerson";

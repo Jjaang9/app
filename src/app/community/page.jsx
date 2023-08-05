@@ -1,9 +1,7 @@
 "use client";
 
-import React from "react";
 import Header from "@/components/common/Header";
 import styled from "styled-components";
-import Image from "next/image";
 
 const Community = ({ name }) => {
   const truncate = (str) => {

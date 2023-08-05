@@ -1,4 +1,5 @@
-import Header from "@/components/common/Header";
+"use client";
+
 import Navigation from "@/components/common/Navigation";
 import { ReactNode } from "react";
 import { styled } from "styled-components";
