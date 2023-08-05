@@ -1,5 +1,6 @@
 "use client";
 
+import AppLayout from "@/layouts/AppLayout";
 import GlobalStyle from "@/styles/global.style";
 
 export default function RootLayout({
@@ -10,7 +11,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <GlobalStyle />
-      <body>{children}</body>
+      <body>
+        <AppLayout>{children}</AppLayout>
+      </body>
     </html>
   );
 }
