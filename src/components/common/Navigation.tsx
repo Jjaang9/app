@@ -23,7 +23,7 @@ const Navigation = () => {
       </LinkItem>
       <LinkItem href="/community">
         <IconCommunity />
-        <Desc>커뮤니티</Desc>
+        <Desc>지역 알리미</Desc>
       </LinkItem>
       <LinkItem href="/my-info">
         <IconPerson />
