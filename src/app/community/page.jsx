@@ -2,11 +2,17 @@
 
 import Header from "@/components/common/Header";
 import styled from "styled-components";
+import { useRouter, useSearchParams } from "next/navigation";
+import Image from "next/image";
 
 const Community = ({ name }) => {
   const truncate = (str) => {
     return str?.length > 15 ? `${str.substring(0, 15)}...` : str;
   };
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  // const id = searchParams.get("id");
 
   const dummy = [
     {
@@ -65,10 +71,23 @@ const Community = ({ name }) => {
             <Items>
               <Item>
                 <Contents>
-                  <Title>{el.name}</Title>
+                  <Title
+                    onClick={() => {
+                      router.push(`/community/${i + 1}`);
+                    }}
+                  >
+                    {el.name}
+                  </Title>
                   <SubTitle>{truncate(el.contents)}</SubTitle>
                 </Contents>
-                <ImgWrapper></ImgWrapper>
+                <ImgWrapper>
+                  <Image
+                    src="/sleep-cat.png"
+                    alt="sleep-cat"
+                    width={50}
+                    height={50}
+                  />
+                </ImgWrapper>
               </Item>
             </Items>
           </ItemsWrapper>
@@ -150,6 +169,7 @@ export const Title = styled.div`
   height: 28px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 `;
 
 export const SubTitle = styled.div`

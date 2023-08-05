@@ -3,12 +3,19 @@
 import CommentItem from "@/components/app/community/[id]/CommentItem";
 import IconArrowLeft from "@/icons/IconArrowLeft";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { styled } from "styled-components";
+import Plus from "@/icons/IconPlus";
 
 const CommunityDetail = () => {
+  const router = useRouter();
   return (
     <div>
-      <AppBar>
+      <AppBar
+        onClick={() => {
+          router.push("/community");
+        }}
+      >
         <IconArrowLeft />
       </AppBar>
       <Title>성수동에 뭐시기 뭐시기</Title>
@@ -34,7 +41,10 @@ const CommunityDetail = () => {
         <CommentItem />
         <CommentItem />
         <CommentItem />
+        <CommentItem />
+        <CommentItem />
       </CommentList>
+      <AddChatting>+ 댓글 쓰기</AddChatting>
     </div>
   );
 };
@@ -48,6 +58,7 @@ const AppBar = styled.div`
   padding: 0 24px;
   box-sizing: border-box;
   border-bottom: 0.5px solid #c2c2c2;
+  cursor: pointer;
 `;
 
 const Title = styled.p`
@@ -90,4 +101,21 @@ const Comment = styled.p`
 const CommentList = styled.div`
   padding: 0 16px;
   box-sizing: border-box;
+`;
+
+const AddChatting = styled.div`
+  width: 82px;
+  height: 39px;
+  background-color: #ffc531;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  position: fixed;
+  bottom: 50px;
+  color: black;
+  font-size: 12px;
+  margin-left: 20px;
 `;
