@@ -7,7 +7,7 @@ import Header from "@/components/common/Header";
 const Setting = () => {
   return (
     <>
-      <Header name={"설정"} />
+      <Header name="설정" />
       <StyledSetting>
         <TitleWrapper>
           <TitleBox>

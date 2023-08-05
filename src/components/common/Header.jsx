@@ -16,16 +16,17 @@ const Header = ({ name }) => {
 const StyledHeader = styled.div`
   width: 100%;
   height: 48px;
+  margin-left: 20px;
 `;
 
 const Title = styled.div`
   color: black;
   text-decoration: none;
-  width: 20%;
+  width: 30%;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   cursor: pointer;
 `;
 

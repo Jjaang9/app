@@ -21,9 +21,9 @@ const Navigation = () => {
         <IconSOS />
         <Desc>위급 상황</Desc>
       </LinkItem>
-      <LinkItem href="/settings">
+      <LinkItem href="/localAlerts">
         <IconCommunity />
-        <Desc>커뮤니티</Desc>
+        <Desc>지역 알리미</Desc>
       </LinkItem>
       <LinkItem href="/settings">
         <IconPerson />
