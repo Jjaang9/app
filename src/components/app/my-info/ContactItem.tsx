@@ -29,12 +29,14 @@ const ContactItem = ({ id }: PropTypes) => {
     <StyledContactItem>
       <ContactInfo>
         <Name
+          name="name"
           isUnoccupied={
             !contactList.filter((item) => item.id === id)[0].name.length
           }
           onChange={handleContactListDataChange}
         />
         <Phone
+          name="phone"
           isUnoccupied={
             !contactList.filter((item) => item.id === id)[0].phone.length
           }
