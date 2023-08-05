@@ -27,7 +27,10 @@ const CommunityDetail = () => {
       >
         <IconArrowLeft />
       </AppBar>
-      <Title>성수동에 뭐시기 뭐시기</Title>
+      <Title>
+        3000명 회원 둔 ‘MZ 마약상’ 잡고 보니… 성수동서 포르쉐 타던 20대 그놈
+        [사건수첩]
+      </Title>
       <Contents>
         <Thumbnail
           src="/sleep-cat.png"
@@ -36,10 +39,10 @@ const CommunityDetail = () => {
           height={218}
         />
         <ContentsText>
-          Lorem ipsum dolor sit amet consectetur. Aliquam eget risus suspendisse
-          praesent at. Mauris quam eu ultrices congue blandit. Felis orci odio
-          pharetra purus leo parturient tellus faucibus. Euismod risus erat vel
-          vivamus sed faucibus augue.
+          20대 대학생부터 10대 고등학생까지 모인 이른바 ‘MZ 마약조직’이 경찰에
+          붙잡혔다. 디지털에 익숙한 MZ세대 답게, 가상화폐로 마약 판매금을
+          챙기고, 보안 기능이 강화된 텔레그램 메신저를 악용해 전국에다 클럽
+          등에서 주로 유통되는 신종 마약류를 내다 팔았다.
         </ContentsText>
       </Contents>
       <Comment>댓글</Comment>
