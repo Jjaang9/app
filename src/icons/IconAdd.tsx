@@ -1,6 +1,9 @@
-const IconAdd = () => {
+import { PropTypes } from "./icon.type";
+
+const IconAdd = (props: PropTypes) => {
   return (
     <svg
+      onClick={props.onClick}
       xmlns="http://www.w3.org/2000/svg"
       width="18"
       height="18"

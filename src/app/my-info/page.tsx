@@ -1,11 +1,22 @@
 "use client";
 
+import { ContactListAtomState } from "@/atoms/myInfo.atom";
 import ContactItem from "@/components/app/my-info/ContactItem";
 import IconAdd from "@/icons/IconAdd";
 import Image from "next/image";
+import { useRecoilState } from "recoil";
 import { styled } from "styled-components";
 
 const MyInfo = () => {
+  const [contactList, setContactList] = useRecoilState(ContactListAtomState);
+
+  const handleAddContact = () => {
+    setContactList((prev) => [
+      ...prev,
+      { id: Date.now(), name: "", phone: "" },
+    ]);
+  };
+
   return (
     <StyledMyInfo>
       <ProfileCard>
@@ -34,11 +45,11 @@ const MyInfo = () => {
       </ProfileCard>
       <MyContacts>나의 연락처에 등록된 사람</MyContacts>
       <ContactList>
-        <ContactItem />
-        <ContactItem />
-        <ContactItem />
+        {contactList.map((item) => (
+          <ContactItem key={item.id} id={item.id} />
+        ))}
       </ContactList>
-      <AddContactButton>
+      <AddContactButton onClick={handleAddContact}>
         <IconAdd />
       </AddContactButton>
     </StyledMyInfo>

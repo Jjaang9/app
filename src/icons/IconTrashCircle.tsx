@@ -1,11 +1,15 @@
-const IconTrashCircle = () => {
+import { PropTypes } from "./icon.type";
+
+const IconTrashCircle = (props: PropTypes) => {
   return (
     <svg
+      onClick={props.onClick}
       width="24"
       height="24"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      cursor="pointer"
     >
       <circle cx="12" cy="12" r="11.5" fill="white" stroke="#C2C2C2" />
       <path

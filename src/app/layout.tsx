@@ -2,6 +2,7 @@
 
 import AppLayout from "@/layouts/AppLayout";
 import GlobalStyle from "@/styles/global.style";
+import { RecoilRoot } from "recoil";
 
 export default function RootLayout({
   children,
@@ -10,10 +11,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <GlobalStyle />
-      <body>
-        <AppLayout>{children}</AppLayout>
-      </body>
+      <RecoilRoot>
+        <GlobalStyle />
+        <body>
+          <AppLayout>{children}</AppLayout>
+        </body>
+      </RecoilRoot>
     </html>
   );
 }
