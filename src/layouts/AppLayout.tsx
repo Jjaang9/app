@@ -6,7 +6,6 @@ import { styled } from "styled-components";
 const AppLayout = ({ children }: { children: ReactNode }) => {
   return (
     <StyledAppLayout>
-      <Header />
       <Children>{children}</Children>
       <Navigation />
     </StyledAppLayout>

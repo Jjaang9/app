@@ -13,7 +13,7 @@ const Navigation = () => {
         <IconSettings />
         <Desc>설정</Desc>
       </LinkItem>
-      <LinkItem href="/settings">
+      <LinkItem href="/setting">
         <IconMap />
         <Desc>지도</Desc>
       </LinkItem>
