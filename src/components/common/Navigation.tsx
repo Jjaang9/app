@@ -25,7 +25,7 @@ const Navigation = () => {
         <IconCommunity />
         <Desc>커뮤니티</Desc>
       </LinkItem>
-      <LinkItem href="/myinfo">
+      <LinkItem href="/my-info">
         <IconPerson />
         <Desc>내 정보</Desc>
       </LinkItem>
