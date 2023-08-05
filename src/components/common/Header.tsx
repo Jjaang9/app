@@ -11,7 +11,6 @@ const Header = () => {
 const StyledHeader = styled.div`
   width: 100%;
   height: 48px;
-  border-bottom: 1px solid #c2c2c2;
 `;
 
 const Title = styled.div`

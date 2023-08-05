@@ -1,5 +1,6 @@
 import Header from "@/components/common/Header";
-import React, { ReactNode } from "react";
+import Navigation from "@/components/common/Navigation";
+import { ReactNode } from "react";
 import { styled } from "styled-components";
 
 const AppLayout = ({ children }: { children: ReactNode }) => {
@@ -7,6 +8,7 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
     <StyledAppLayout>
       <Header />
       <Children>{children}</Children>
+      <Navigation />
     </StyledAppLayout>
   );
 };
@@ -14,6 +16,7 @@ const AppLayout = ({ children }: { children: ReactNode }) => {
 const StyledAppLayout = styled.div`
   display: flex;
   flex-direction: column;
+  height: 100vh;
 `;
 
 const Children = styled.div`
