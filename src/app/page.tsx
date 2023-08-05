@@ -24,7 +24,7 @@ const Sos = () => {
 
   return (
     <>
-      <Header />
+      <Header name="main" />
       <FlexBox>
         <AlarmWrapper>
           <Alarm onClick={alertToOthers}>

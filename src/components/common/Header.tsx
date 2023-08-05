@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-const Header = () => {
+const Header = ({ name }: { name: string }) => {
   return (
     <StyledHeader>
-      <Title>내 정보</Title>
+      <Title>{name}</Title>
     </StyledHeader>
   );
 };
